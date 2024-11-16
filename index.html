@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parasite Portfolio - Daria Davydenko</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollToTopBtn" class="scroll-to-top">
+      ↑
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top justify-content-between"
+    >
+      <a class="navbar-brand mx-3" href="#">Parasite Portfolio</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#introduction">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#common-terms">Common Terms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#lab-procedures">Lab Procedures</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#parasite-classification"
+              >Parasite Classification</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#endoparasites">Endoparasites</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ectoparasites">Ectoparasites</a>
+          </li>
+        </ul>
+      </div>
+      <span class="navbar-text ml-auto mx-3">
+        <img
+          src="ukraine.png"
+          style="width: 30px"
+          class=""
+          alt="Ukraine Flag"
+        />
+        Daria Davydenko - 200335788
+      </span>
+    </nav>
+
+    <!-- Full-Screen Introduction Section -->
+    <section id="introduction" class="intro-section text-center">
+      <h1 class="portfolio-title" data-aos="fade-up">Parasite Portfolio</h1>
+      <p class="intro-text px-5" data-aos="fade-up">
+        Welcome to the Parasite Portfolio, a comprehensive study guide for our
+        parasitology part of the Lab class. This portfolio brings together
+        essential terms, diagnostic procedures, lifecycle details, and visuals
+        of various parasites we saw in lab. <br />
+        I was a software developer for 6 years and I thought it would be fun to
+        create a little website for this assignment.
+      </p>
+    </section>
+
+    <!-- Common Terms Section -->
+    <section
+      id="common-terms"
+      class="container-fluid"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
+      <h2 class="text-center">Common Terms</h2>
+      <div class="tree">
+        <ul class="list-group list-group-flush">
+          <h3>Genetal</h3>
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Parasite</span>
+            <ul style="display: none">
+              <li>
+                An animal or organism that grows, feeds, and lives on or in
+                another organism. <br />
+                1. entirely dependent on a host to complete their life cycle<br />
+                2. the only goal: to ensure the survival of future generations
+                of the offspring
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Vector</span>
+            <ul style="display: none">
+              <li>An organism that transmit disease.</li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Zoonosis</span>
+            <ul style="display: none">
+              <li>A disease that can be transmitted from animals to humans.</li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)"
+              >Prepatent infection</span
+            >
+            <ul style="display: none">
+              <li>
+                A parasitic infection that is not yet detectable (parasites are
+                inside the animal but no ova/larvae in feces or blood).
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)"
+              >Prepatent period</span
+            >
+            <ul style="display: none">
+              <li>
+                Time between initial infection and the detection of the parasite
+                using standard methods in the lab.
+              </li>
+            </ul>
+          </li>
+
+          <h3 class="mt-3">Hosts</h3>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Definitive Host</span>
+            <ul style="display: none">
+              <li>
+                The final host where the adult parasite lives, matures, or
+                reaches sexual maturity (many parasites are host specific).
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)"
+              >Intermediate Host</span
+            >
+            <ul style="display: none">
+              <li>
+                Harbours the larval, immature, or asexual stages of the
+                parasite.
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)"
+              >Paratenic (Transport) Host</span
+            >
+            <ul style="display: none">
+              <li>
+                Can harbour the parasite but does not hasten or hinder parasite
+                development.
+              </li>
+            </ul>
+          </li>
+
+          <h3 class="mt-3">Endoparasites vs ectoparasites</h3>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Endoparasite</span>
+            <ul style="display: none">
+              <li>&bull;&ensp;Inside</li>
+              <li>&bull;&ensp;Absorb nutrients intended for the host</li>
+              <li>&bull;&ensp;Often drink blood → cause anemia → death</li>
+              <li>&bull;&ensp;Damages tissue, circulatory system</li>
+              <li>&bull;&ensp;Produces toxins</li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Ectoparasites</span>
+            <ul style="display: none">
+              <li>&bull;&ensp;Outside</li>
+              <li>&bull;&ensp;Damages and irritates skin</li>
+              <li>&bull;&ensp;Often transmits infectious diseases</li>
+              <li>&bull;&ensp;Often drink blood → cause anemia → death</li>
+              <li>&bull;&ensp;Causes restlessness and nervousness</li>
+            </ul>
+          </li>
+
+          <h3 class="mt-3">Eggs</h3>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Ovum/Ova/Oocyte</span>
+            <ul style="display: none">
+              <li>Egg or egg-like</li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Larva</span>
+            <ul style="display: none">
+              <li>
+                A developmental stage between egg and adult. Often an infectious
+                form of the parasite.
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Microfilaria</span>
+            <ul style="display: none">
+              <li>
+                A developmental stage of heartworm that occurs prior to the
+                larva stage.
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Nymph</span>
+            <ul style="display: none">
+              <li>
+                Developmental stage of ticks that occurs between the larva and
+                adult stages.
+              </li>
+            </ul>
+          </li>
+
+          <h3 class="mt-3">Routes of infection</h3>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)"
+              >Direct Life Cycle</span
+            >
+            <ul style="display: none">
+              <li>
+                The parasite is passed directly from one host to another (being
+                ingested, penetrating the skin, or as an infant by nursing or
+                absorbing the parasite through the placenta).
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)"
+              >Indirect Life Cycle</span
+            >
+            <ul style="display: none">
+              <li>
+                A parasite relies on a paratenic or intermediate host(s) to
+                complete its life cycle.
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Transmammary</span>
+            <ul style="display: none">
+              <li>
+                The parasite is passed through the mammary gland to the host's
+                offspring.
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Transplacental</span>
+            <ul style="display: none">
+              <li>
+                The parasite is passed across the placenta to an animal in
+                utero.
+              </li>
+            </ul>
+          </li>
+
+          <h3 class="mt-3">Taxonomy & Nomenclature</h3>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)">Taxonomy</span>
+            <ul style="display: none">
+              <li>
+                <p>
+                  The scientific study of naming, defining, and classifying
+                  groups of biological organisms based on shared
+                  characteristics.
+                </p>
+                <img
+                  src="images/taxonomy.jpg"
+                  class="img-fluid accordion-image"
+                  alt="Centrifuge parts"
+                />
+                <small>
+                  <a
+                    href="https://www.britannica.com/science/taxonomy"
+                    target="_blank"
+                    >Source</a
+                  >
+                </small>
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-group-item">
+            <span class="term" onclick="toggleTerm(this)"
+              >Binomial Nomenclature</span
+            >
+            <ul style="display: none">
+              <li>
+                <p>
+                  A system of nomenclature in which each species of animal or
+                  plant receives a name of two terms of which the first
+                  identifies the genus to which it belongs and the second the
+                  species itself.
+                  <span
+                    ><a
+                      href="https://byjus.com/biology/binomial-nomenclature/"
+                      target="_blank"
+                      >(Source)</a
+                    ></span
+                  >
+                </p>
+                <p><b>Rules</b></p>
+                <ol>
+                  <li>
+                    All the scientific names of organisms are usually Latin and
+                    written in italics.
+                  </li>
+                  <li>
+                    There exist two parts of a name. The first word identifies
+                    the genus and the second word identifies the species.
+                  </li>
+                  <li>
+                    When the names are handwritten, they are
+                    <u>underlined</u> or <i>italicized</i> if typed (to specify
+                    its Latin origin).
+                  </li>
+                  <li>
+                    The name of the Genus starts with a capital letter and the
+                    name of the species starts with a small letter.
+                  </li>
+                  <li>Short forms are acceptable (Source)</li>
+                </ol>
+                <br />
+                <p><b>Example:</b></p>
+                <p>Lion - Panthera leo (<i>P. leo</i>)</p>
+              </li>
+            </ul>
+          </li>
+          <!-- END-->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Lab Equipment & Procedures -->
+    <section id="lab-procedures" class="container-fluid" data-aos="fade-up">
+      <h2 class="text-center">Lab Equipment & Procedures</h2>
+
+      <!-- Accordion Component -->
+      <div class="accordion accordion-flush" id="labProceduresAccordion">
+        <!-- Accordion Item 1: Microscope -->
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header" id="headingMicroscope">
+            <button
+              class="accordion-button collapsed bg-transparent"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseMicroscope"
+              aria-expanded="false"
+              aria-controls="collapseMicroscope"
+              onclick="focusAccordion(this)"
+            >
+              Microscope
+            </button>
+          </h2>
+          <div
+            id="collapseMicroscope"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingMicroscope"
+            data-bs-parent="#labProceduresAccordion"
+          >
+            <div class="accordion-body">
+              <p>
+                A compound light microscope consists of 2 separate lens systems:
+                the ocular (9) and the objective (3-5).
+              </p>
+              <ul>
+                <li><b>Ocular lens</b> - magnification x10</li>
+                <li>
+                  <b>Objective lens</b> - magnification x4 (scanning), x10 (low
+                  power), x40 (high dry), x100 (oil immersion)
+                </li>
+              </ul>
+              <p>Total magnification = 10 (ocular) x N (objective) = 10N</p>
+
+              <img
+                src="images/microscope.jpg"
+                class="img-fluid"
+                alt="Microscope parts"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2: Centrifuge -->
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header" id="headingCentrifuge">
+            <button
+              class="accordion-button collapsed bg-transparent"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseCentrifuge"
+              aria-expanded="false"
+              aria-controls="collapseCentrifuge"
+              onclick="focusAccordion(this)"
+            >
+              Centrifuge
+            </button>
+          </h2>
+          <div
+            id="collapseCentrifuge"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingCentrifuge"
+            data-bs-parent="#labProceduresAccordion"
+          >
+            <div class="accordion-body">
+              <p>
+                A device that applies a centrifugal (rotation) force to separate
+                various components of a liquid based on their density.
+              </p>
+
+              <p>
+                Example: <br />
+                Blood = RBC + WBC + plasma/serum Urine = sediment + supernatant
+                Fecal flotation = meniscus + solution + sediment
+              </p>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <img
+                      src="images/centrifuge-1.jpg"
+                      class="img-fluid accordion-image"
+                      alt="Centrifuge parts"
+                    />
+                  </div>
+                  <div class="col-sm">
+                    <img
+                      src="images/centrifuge-2.jpg"
+                      class="img-fluid accordion-image"
+                      alt="Centrifuge parts"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p>
+                <small>
+                  <a
+                    href="https://microbenotes.com/centrifuge-principle-parts-types-uses-examples/"
+                    target="_blank"
+                    >Source</a
+                  >
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3: Battlefield Method -->
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header" id="headingBattlefieldMethod">
+            <button
+              class="accordion-button collapsed bg-transparent"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseBattlefieldMethod"
+              aria-expanded="false"
+              aria-controls="collapseBattlefieldMethod"
+              onclick="focusAccordion(this)"
+            >
+              Battlefield Method
+            </button>
+          </h2>
+          <div
+            id="collapseBattlefieldMethod"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingBattlefieldMethod"
+            data-bs-parent="#labProceduresAccordion"
+          >
+            <div class="accordion-body">
+              <img
+                src="images/BattlefieldMethod.jpg"
+                class="img-fluid accordion-image"
+                alt="Battlefield Method to scan a slide"
+              />
+              <p><small> Source - Lab Lecture Presentation </small></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 4: Ova Count -->
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header" id="headingOvaCount">
+            <button
+              class="accordion-button collapsed bg-transparent"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOvaCount"
+              aria-expanded="false"
+              aria-controls="collapseOvaCount"
+              onclick="focusAccordion(this)"
+            >
+              Ova & Oocyte Reporting
+            </button>
+          </h2>
+          <div
+            id="collapseOvaCount"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOvaCount"
+            data-bs-parent="#labProceduresAccordion"
+          >
+            <div class="accordion-body">
+              <p>
+                The number of ova or parasites is the number viewed on the
+                entire slide for each parasite reported
+              </p>
+              <img
+                src="images/OvaCount.jpg"
+                class="img-fluid accordion-image"
+                alt="Ova & Oocyte Reporting"
+              />
+              <p><small> Source - Lab Lecture Presentation </small></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 5: Fecal Direct Smear -->
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header" id="headingDirectSmear">
+            <button
+              class="accordion-button collapsed bg-transparent"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseDirectSmear"
+              aria-expanded="false"
+              aria-controls="collapseDirectSmear"
+              onclick="focusAccordion(this)"
+            >
+              Fecal Direct Smear
+            </button>
+          </h2>
+          <div
+            id="collapseDirectSmear"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingDirectSmear"
+            data-bs-parent="#labProceduresAccordion"
+          >
+            <div class="accordion-body">
+              <div>
+                <p>Materials:</p>
+                <ol>
+                  <li>Glass slide</li>
+                  <li>Glass coverslips</li>
+                  <li>Wooden applicator stick</li>
+                  <li>Water or saline</li>
+                  <li>Waxed paper cups</li>
+                </ol>
+              </div>
+              <div>
+                <p>Procedure:</p>
+                <ol>
+                  <li>
+                    Dip the applicator stick into the feces (only a small amount
+                    should adhere to the stick).
+                  </li>
+                  <li>Place a drop of saline on a slide.</li>
+                  <li>
+                    Mix the feces with the saline to produce a homogeneous
+                    emulsion that is clear enough to read newsprint through (a
+                    common mistake is to make the smear too thick).
+                  </li>
+                  <li>Place the coverslip over the emulsion.</li>
+                  <li>Examine the slide.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 6: Fecal Flotation -->
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header" id="headingFlotation">
+            <button
+              class="accordion-button collapsed bg-transparent"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFlotation"
+              aria-expanded="false"
+              aria-controls="collapseFlotation"
+              onclick="focusAccordion(this)"
+            >
+              Fecal Flotation
+            </button>
+          </h2>
+          <div
+            id="collapseFlotation"
+            class="accordion-collapse collapse"
+            aria-labelledby="headinglotation"
+            data-bs-parent="#labProceduresAccordion"
+          >
+            <div class="accordion-body">
+              <div>
+                <p>Materials:</p>
+                <ol>
+                  <li>Glass slide</li>
+                  <li>Glass coverslips</li>
+                  <li>Wooden applicator stick</li>
+                  <li>Paper cup</li>
+                  <li>Waxed paper</li>
+                  <li>Gauze squares of metal screen tea strainer</li>
+                  <li>Funnel</li>
+                  <li>Conical tube</li>
+                  <li>Sugar flotation solution</li>
+                  <li>Scale</li>
+                </ol>
+              </div>
+              <div>
+                <p>Procedure:</p>
+                <ol>
+                  <li>Place approx. 5 g of feces in the paper cup.</li>
+                  <li>Add 30 ml of flotation solution.</li>
+                  <li>
+                    With the applicator stick, mix the feces to an evenly
+                    suspended emulsion.
+                  </li>
+                  <li>
+                    Using the strainer, pour the liquid into the tube enough to
+                    create a meniscus (dome).
+                  </li>
+                  <li>Place a coverslip on top of the tube.</li>
+                  <li>Leave the coverslip for 15 minutes.</li>
+                  <li>
+                    Pick the coverslip and place it on the glass slide with the
+                    fluid down.
+                  </li>
+                  <li>Examine the slide.</li>
+                </ol>
+              </div>
+              <img
+                src="images/fecalFlotation.jpg"
+                class="img-fluid accordion-image"
+                alt="Fecal Flotation Containers"
+              />
+              <p>
+                <small>
+                  Source - Hickie, J., & Blanchard, L. (2024). Fig. 50.1.
+                  Laboratory Procedures for Veterinary Technicians (7th ed., p.
+                  323). Elsevier Canada.
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 7: Fecal Centrifuge Flotation -->
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header" id="headingCentrifugeFlotation">
+            <button
+              class="accordion-button collapsed bg-transparent"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseCentrifugeFlotation"
+              aria-expanded="false"
+              aria-controls="collapseCentrifugeFlotation"
+              onclick="focusAccordion(this)"
+            >
+              Fecal Centrifuge Flotation
+            </button>
+          </h2>
+          <div
+            id="collapseCentrifugeFlotation"
+            class="accordion-collapse collapse"
+            aria-labelledby="headinglotation"
+            data-bs-parent="#labProceduresAccordion"
+          >
+            <div class="accordion-body">
+              <div>
+                <p>Materials:</p>
+                <ol>
+                  <li>Glass slide</li>
+                  <li>Glass coverslips</li>
+                  <li>Wooden applicator stick</li>
+                  <li>Paper cup</li>
+                  <li>Gauze squares of metal screen tea strainer</li>
+                  <li>Funnel</li>
+                  <li>Conical tube</li>
+                  <li>Sugar flotation solution</li>
+                  <li>Scale</li>
+                </ol>
+              </div>
+
+              <div>
+                <p>Procedure:</p>
+                <ol>
+                  <li>
+                    Prepare a fecal emulsion using 5 g of feces and 30 mL of the
+                    flotation solution.
+                  </li>
+                  <li>
+                    Using the strainer, pour the liquid into the centrifuge tube
+                    until it’s about ⅔ full.
+                  </li>
+                  <li>Place a waxed paper on top of the tube.</li>
+                  <li>
+                    Place the tubes in the centrifuge buckets, and balance them
+                    with the tube with equal weight of the sample or water.
+                  </li>
+                  <li>
+                    Centrifuge the tubes for 5 minutes at approximately 1300
+                    rpm.
+                  </li>
+                  <li>
+                    Remove the coverslips from the tubes by lifting straight up,
+                    and then place it on a slide.
+                  </li>
+                  <li>Examine the slide.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 8: Fecal Sedimentation -->
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header" id="headingSedimentation">
+            <button
+              class="accordion-button collapsed bg-transparent"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSedimentation"
+              aria-expanded="false"
+              aria-controls="collapseSedimentation"
+              onclick="focusAccordion(this)"
+            >
+              Fecal Sedimentation
+            </button>
+          </h2>
+          <div
+            id="collapseSedimentation"
+            class="accordion-collapse collapse"
+            aria-labelledby="headinglotation"
+            data-bs-parent="#labProceduresAccordion"
+          >
+            <div class="accordion-body">
+              <div>
+                <p>Materials:</p>
+                <ol>
+                  <li>Glass slide</li>
+                  <li>Glass coverslips</li>
+                  <li>Wooden applicator stick</li>
+                  <li>Paper cup</li>
+                  <li>Gauze squares of metal screen tea strainer</li>
+                  <li>Funnel</li>
+                  <li>Conical tube</li>
+                  <li>Sugar flotation solution</li>
+                  <li>Scale</li>
+                  <li>Disposable pipettes</li>
+                </ol>
+              </div>
+
+              <div>
+                <p>Procedure:</p>
+                <ol>
+                  <li>
+                    Prepare a fecal emulsion using 5 g of feces and 30 mL of the
+                    flotation solution.
+                  </li>
+                  <li>
+                    Using the strainer, pour the liquid into the centrifuge tube
+                    until it’s about ⅔ full.
+                  </li>
+                  <li>Place a waxed paper on top of the tube.</li>
+                  <li>
+                    Place the tubes in the centrifuge buckets, and balance them
+                    with the tube with equal weight of the sample or water.
+                  </li>
+                  <li>
+                    Centrifuge the tubes for 5 minutes approximately 1300 rpm.
+                  </li>
+                  <li>
+                    Use a pipette to carefully remove the solution, leaving the
+                    supernatant at the bottom.
+                  </li>
+                  <li>Use a pipette to transfer the sediment to a slide.</li>
+                  <li>Place a coverslip over the sediment.</li>
+                  <li>Examine the slide.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 9: Baermann Technique -->
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header" id="headingBaermannTechnique">
+            <button
+              class="accordion-button collapsed bg-transparent"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseBaermannTechnique"
+              aria-expanded="false"
+              aria-controls="collapseBaermannTechnique"
+              onclick="focusAccordion(this)"
+            >
+              Baermann Technique
+            </button>
+          </h2>
+          <div
+            id="collapseBaermannTechnique"
+            class="accordion-collapse collapse"
+            aria-labelledby="headinglotation"
+            data-bs-parent="#labProceduresAccordion"
+          >
+            <div class="accordion-body">
+              <div>
+                <p>Materials:</p>
+                <ol>
+                  <li>Glass slide</li>
+                  <li>Glass coverslips</li>
+                  <li>Wooden applicator stick</li>
+                  <li>
+                    Baermann apparatus (tube stand, funnel, rubber tubing,
+                    clamp, and wire screen)
+                  </li>
+                  <li>Water</li>
+                  <li>Funnel</li>
+                  <li>Gauze squares of metal screen tea strainer</li>
+                  <li>Conical tube</li>
+                  <li>Scale</li>
+                  <li>Disposable pipettes</li>
+                </ol>
+              </div>
+
+              <div>
+                <p>Procedure:</p>
+                <ol>
+                  <li>
+                    Construct the Baermann apparatus by putting the funel to a
+                    tube stand.
+                  </li>
+                  <li>
+                    Attach 3 to 4 inches of rubber tubing to the narrow portion
+                    of the funnel and ensure a good seal.
+                  </li>
+                  <li>Put the tea strainer on top of the funel.</li>
+                  <li>
+                    Place pinch clamps at the end of the rubber tubing and check
+                    for a tight seal using water.
+                  </li>
+                  <li>
+                    Wrap 30 g. of feces in several layers of cloth like a teabag
+                    and place the fecal pouch in the funnel.
+                  </li>
+                  <li>
+                    Fill the funnel with warm water (not hot) above the fecal
+                    sample.
+                  </li>
+                  <li>
+                    Allow the apparatus to remain undisturbed for 24 hours.
+                  </li>
+                  <li>
+                    After the time has passed, collect approx. 2 ml of the fluid
+                    from the rubber tubing and transfer it to a centrifuge tube.
+                  </li>
+                  <li>Use a pipette to transfer the supernatant to a slide.</li>
+                  <li>Place the coverslip over the emulsion.</li>
+                  <li>Examine the slide.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Accordion Item 10: McMaster Count -->
+        <div class="accordion-item bg-transparent">
+          <h2 class="accordion-header" id="headingMcMasterCount">
+            <button
+              class="accordion-button collapsed bg-transparent"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseMcMasterCount"
+              aria-expanded="false"
+              aria-controls="collapseMcMasterCount"
+              onclick="focusAccordion(this)"
+            >
+              McMaster Count
+            </button>
+          </h2>
+          <div
+            id="collapseMcMasterCount"
+            class="accordion-collapse collapse"
+            aria-labelledby="headinglotation"
+            data-bs-parent="#labProceduresAccordion"
+          >
+            <div class="accordion-body">
+              <div>
+                <p>Materials:</p>
+                <ol>
+                  <li>McMaster slides</li>
+                  <li>Paper cup</li>
+                  <li>Scale</li>
+                  <li>Sugar flotation solution</li>
+                  <li>Wooden applicator stick</li>
+                  <li>Disposable pipettes</li>
+                  <li>Gauze squares of metal screen tea strainer</li>
+                </ol>
+              </div>
+
+              <div>
+                <p>Procedure:</p>
+                <ol>
+                  <li>
+                    Prepare a fecal emulsion using 4 g of feces with 56 mL of
+                    the flotation solution.
+                  </li>
+                  <li>
+                    Strain the emulsion with a tea strainer to remove any large
+                    pieces of debri.
+                  </li>
+                  <li>
+                    use a filter pipette to transfer material to the counting
+                    chamber.
+                  </li>
+                  <li>Allow the slide to sit undisturbed for 10 minutes.</li>
+                  <li>
+                    Using the 10× objective lens, focus on the etched grid of
+                    the McMaster slide. Count all eggs or oocysts in the six
+                    columns of the etched square. Keep a separate count for each
+                    species of parasite observed.
+                  </li>
+                  <li>
+                    Multiply the number of eggs or oocysts counted by the
+                    appropriate dilution factor based on the number of squares
+                    counted. Record the results as eggs per gram (epg) of feces.
+                    The volume under the etched area is 0.15 mL.
+                  </li>
+                  <li>
+                    Use the formula: (chamber 1 + chamber 2) * 50 = eggs per
+                    gram (EPG)
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END ACCORDION -->
+      </div>
+    </section>
+
+    <!-- Graph Section -->
+    <section
+      id="parasite-classification"
+      class="container my-5"
+      data-aos="fade-up"
+    >
+      <h2 class="text-center">Parasite Classification</h2>
+      <p class="text-center">
+        <img
+          src="images/parasitesClassification.jpg"
+          class="img-fluid img-parasites-classification"
+          alt="Parasites Classification"
+        />
+      </p>
+    </section>
+
+    <!-- Endoparasites Portfolio Section -->
+    <section id="endoparasites" class="container my-5" data-aos="fade-up">
+      <h2 class="text-center">Endoparasites</h2>
+      <p class="text-center">Click to view details</p>
+
+      <!-- Filters -->
+      <section id="filters" class="container my-4">
+        <div class="row align-bottom">
+          <div class="col-5">
+            <label for="endoSpeciesFilter">Definitive host:</label>
+            <select
+              class="form-select"
+              aria-label="Species filter"
+              id="endoSpeciesFilter"
+              onchange="applyEndoparasiteFilters()"
+            >
+              <option value="all">All</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+              <option value="equine">Equine</option>
+            </select>
+          </div>
+          <div class="col-5">
+            <label for="zoonoticFilter">Zoonotic:</label>
+            <select
+              class="form-select"
+              aria-label="Zoonotic filter"
+              id="zoonoticFilter"
+              onchange="applyEndoparasiteFilters()"
+            >
+              <option value="all">All</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="col-2 align-self-end">
+            <button
+              type="button"
+              class="btn btn-light"
+              onclick="resetEndoparasitesFilters()"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parasite Display Area -->
+      <section id="endoparasites" class="container my-5" data-aos="fade-up">
+        <h2 class="text-center">Endoparasites</h2>
+        <p class="text-center">Click to view details</p>
+        <div
+          id="endoparasiteContainer"
+          data-aos="fade-up"
+          class="row row-cols-3"
+        ></div>
+      </section>
+    </section>
+
+    <!-- Ectoparasites Portfolio Section -->
+    <section id="ectoparasites" class="container my-5" data-aos="zoom-in">
+      <h2 class="text-center">Ectoparasites</h2>
+      <p class="text-center">Click to view details</p>
+
+      <!-- Filters -->
+      <section id="filters" class="container my-4">
+        <div class="row align-bottom">
+          <div class="col-10">
+            <label for="ectoSpeciesFilter">Species:</label>
+            <select
+              class="form-select"
+              aria-label="Species filter"
+              id="ectoSpeciesFilter"
+              onchange="applyEctoparasiteFilters()"
+            >
+              <option value="all">All</option>
+              <option value="tick">Ticks</option>
+              <option value="mite">Mites</option>
+              <option value="flea">Fleas</option>
+              <option value="louse">Lice</option>
+              <option value="fly">Flies</option>
+            </select>
+          </div>
+          <div class="col-2 align-self-end">
+            <button
+              type="button"
+              class="btn btn-light"
+              onclick="resetEctoparasitesFilters()"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parasite Display Area -->
+      <section id="ectoparasites" class="container my-5" data-aos="zoom-in">
+        <h2 class="text-center">Ectoparasites</h2>
+        <p class="text-center">Click to view details</p>
+        <div
+          id="ectoparasitesContainer"
+          data-aos="zoom-in"
+          class="row row-cols-3"
+        ></div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+
+    <div class="container-fluid px-0">
+      <footer class="py-3 mt-4 bg-dark text-white">
+        <p class="nav justify-content-center border-bottom pb-3 mb-3">
+          Daria Davydenko - 200335788
+        </p>
+        <p class="text-center text-white">
+          &copy; 2024 Lab Techniques - Georgian College
+        </p>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="endoparasites.js"></script>
+    <script src="ectoparasites.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
