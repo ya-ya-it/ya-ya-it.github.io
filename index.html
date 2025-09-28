@@ -2,197 +2,245 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RVT - Indeed Clone</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dental Care Assignment</title>
+    <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
     <style>
       body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth;
       }
-      .container {
-        max-width: 800px;
+      section {
+        min-height: 100vh;
+        padding: 60px 20px;
+        display: flex;
+        align-items: center;
+      }
+      .image-col img {
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .marketing-point {
+        background: #f8f9fa;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+      .marketing-point:hover {
+        transform: translateY(-5px);
       }
       footer {
-        margin-top: auto;
-        background-color: #f8f9fa;
-        padding: 20px 0;
-      }
-      ul {
-        list-style-type: none;
-        padding: 0;
-      }
-      li {
-        padding-left: 20px;
-      }
-      .blue-color-text {
-        color: #2557a7 !important;
-      }
-      .btn-primary,
-      .btn-primary:hover,
-      .btn-primary:active,
-      .btn-primary:visited {
-        background-color: #2557a7 !important;
-        border-color: #2557a7 !important;
-      }
-      .btn-outline-primary {
-        color: #2557a7;
-        border-color: #2557a7 !important;
-      }
-      .btn-outline-primary:hover {
-        background-color: #2557a7 !important;
+        background: #343a40;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <header class="bg-light py-3 shadow-sm">
-      <div class="container d-flex justify-content-between align-items-center">
-        <a
-          href="index.html"
-          class="h4 text-dark text-decoration-none blue-color-text"
-          >Indeed Clone</a
-        >
-        <form class="d-flex w-50">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Job title, keywords, company"
-            aria-label="Search"
-          />
-          <button class="btn btn-primary" type="submit">Search</button>
-        </form>
-        <div>
-          <a href="#" class="text-dark me-3">Sign In</a>
-          <a href="#" class="btn btn-outline-primary">Post Job</a>
+    <!-- Hero Section -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 image-col">
+            <img src="store.jpg" alt="Global Pet Foods Store" />
+          </div>
+          <div class="col-md-6 d-flex flex-column justify-content-center px-4">
+            <h1 class="display-4 fw-bold">TropiClean Fresh Breath Gel</h1>
+            <p class="lead">A client’s perspective on pet dental care</p>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main class="container my-4">
-      <h1>Registered Veterinary Technician</h1>
-      <p class="text-muted">Chaos & Paws Veterinary Care, Barrie, ON</p>
-      <div class="mb-3">
-        <span class="badge bg-secondary">$25–$35 an hour</span>
-        <span class="badge bg-secondary">Full-time / Part-time</span>
-        <span class="badge bg-secondary">Monday to Friday</span>
-      </div>
-      <div class="d-flex gap-2 mb-4">
-        <button class="btn btn-primary">Apply Now</button>
-        <button class="btn btn-outline-primary">Bookmark</button>
-        <a class="btn btn-outline-primary" href="job-description.html"
-          >Hired - job description</a
-        >
-      </div>
-      <h3>Why should you join?</h3>
-      <p>Wrangling Chaos, One Paw at a Time</p>
-      <p>
-        Welcome to Chaos & Paws Veterinary Care, a vibrant and dynamic
-        veterinary hospital located on the beautiful lakeshore, where top-tier
-        pet care meets a fun and welcoming atmosphere. Our modern, fully
-        equipped facility provides the newest technology to support high-quality
-        medicine, while our team thrives in a warm, supportive environment with
-        learning opportunities. We embrace the chaos of veterinary life with
-        professionalism (at least in front of clients) and a strong sense of
-        support behind the scenes. With free parking, a stunning lakeside view,
-        and a workplace culture that values both expertise and humor, we’re not
-        just a clinic—we’re a family.
-      </p>
-      <p>
-        Think you’ve got what it takes to survive the chaos and thrive in our
-        fun, fast-paced clinic? To apply, please send us your resume—we don’t
-        believe in cover letters! We’d rather hear about your motivation in
-        person. References may be requested later in the process.
-      </p>
-      <h3 class="pt-2">Requirements</h3>
-      <ul>
-        <li>
-          ✔ Graduate of an accredited program for Veterinary Technologists
-          (Registered Veterinary Technologist preferred, but not required)
-        </li>
-        <li>
-          ✔ Strong mathematics skills (drug dose calculations, CRI’s, dilutions)
-        </li>
-        <li>✔ Excellent communication skills, computer and phone skills</li>
-        <li>
-          ✔ Must possess the ability to lift 50 lbs (or at least look confident
-          trying).
-        </li>
-        <li>✔ At least 1 year of experience is preferred but not required.</li>
-        <li>
-          ✔ Ability to stay calm and organized even in the face of tiny, furious
-          chihuahuas.
-        </li>
-        <li>
-          ✔ Skilled in negotiating with dramatic huskies and judgmental cats.
-        </li>
-        <li>
-          ✔ Ability to function on caffeine, adrenaline, and sheer willpower.
-        </li>
-        <li>✔ Must be okay with occasional pet hair in your lunch.</li>
-      </ul>
-      <h3 class="pt-2">What We Offer:</h3>
-      <ul>
-        <li>🐾 Competitive salary (because you deserve it).</li>
-        <li>🐾 Paid overtime.</li>
-        <li>🐾 Health benefits (including mental health days).</li>
-        <li>🐾 Dental benefits.</li>
-        <li>🐾 Paid CE so you can become even more of a vet tech wizard.</li>
-        <li>🐾 Uniform allowance (so you can rock those paw-print scrubs).</li>
-        <li>🐾 Free coffee (because you'll need it).</li>
-        <li>🐾 Generous vacation time (yes, you actually get to take it!)</li>
-        <li>
-          🐾 Opportunities to expand your skills in surgery and dentistry with
-          mentorship and hands-on experience.".
-        </li>
-        <li>
-          🐾 A team that works hard, laughs harder, and occasionally survives
-          the chaos together.
-        </li>
-      </ul>
-      <h3 class="pt-2">Our Team & Culture:</h3>
-      <p>
-        At Chaos & Paws, we believe that a great workplace is built on teamwork,
-        trust, and a healthy dose of humor. We celebrate wins, support each
-        other through tough cases, and believe that vet med should be
-        rewarding—not just exhausting. We work hard, but we also make time for
-        coffee breaks and birthday celebrations. If you’re looking for a clinic
-        that values your skills and respects your work-life balance—you’ve found
-        the right place!
-      </p>
-      <br />
-      <br />
-      <p>
-        <strong>Accessibility & Equal Opportunity Employer Statement:</strong>
-        Chaos & Paws Veterinary Care is committed to fostering an inclusive,
-        accessible, and equitable workplace. We welcome applicants of all
-        backgrounds and are dedicated to providing a work environment free from
-        discrimination and harassment. Accommodations are available upon request
-        for candidates taking part in all aspects of the selection process. If
-        you require accommodation, please let us know how we can support you.
-      </p>
-      <p>
-        We appreciate every applicant’s interest in joining our team! All
-        candidates will be contacted regarding the status of their application.
-      </p>
-    </main>
-
-    <footer class="text-center">
+    <!-- Product Section -->
+    <section>
       <div class="container">
-        <p class="mb-1">&copy; 2025 - Daria Davydenko - 200335788</p>
-        <a href="#" class="text-decoration-none me-2 blue-color-text"
-          >Privacy Policy</a
-        >
-        <a href="#" class="text-decoration-none blue-color-text"
-          >Terms of Service</a
-        >
+        <div class="row flex-md-row-reverse">
+          <div class="col-md-6 image-col">
+            <img
+              src="product1.jpg"
+              alt="TropiClean Gel"
+              style="max-width: 250px"
+            />
+            <img
+              src="product2.jpg"
+              alt="TropiClean Gel"
+              style="max-width: 250px"
+            />
+            <img
+              src="product3.jpg"
+              alt="TropiClean Gel"
+              style="max-width: 250px"
+            />
+            <img
+              src="product4.jpg"
+              alt="TropiClean Gel"
+              style="max-width: 250px"
+            />
+          </div>
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h2>About the Product</h2>
+            <p>
+              I chose this product because of the bright colors of its package,
+              form of application, and the promotional images. The product label
+              states that it “removes plaque and tartar” and helps support fresh
+              breath. The form of application is a gel, so you directly apply it
+              to the dog's teeth without the need to brush. For owners who are
+              having trouble brushing his dog's teeth, this product is most
+              striking. The packaging shows a smiling, healthy dog with clean
+              teeth, creating a positive association.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- Marketing Points -->
+    <section class="bg-light py-5">
+      <div class="container">
+        <h2 class="mb-4 text-center">Marketing Points</h2>
+        <div class="row text-center">
+          <div class="col-md-2 col-6 mb-4">
+            <div class="marketing-point p-3">
+              <i class="bi bi-shield-check display-5 text-success"></i>
+              <p class="mt-2">Removes plaque and tartar</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <div class="marketing-point p-3">
+              <i class="bi bi-wind display-5 text-primary"></i>
+              <p class="mt-2">Supports fresh breath</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <div class="marketing-point p-3">
+              <i class="bi bi-flower3 display-5 text-success"></i>
+              <p class="mt-2">Natural ingredients</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <div class="marketing-point p-3">
+              <i class="bi bi-droplet display-5 text-info"></i>
+              <p class="mt-2">No dyes or sulfates</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <div class="marketing-point p-3">
+              <i class="bi bi-heart display-5 text-danger"></i>
+              <p class="mt-2">Cruelty-free</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-6 mb-4">
+            <div class="marketing-point p-3">
+              <i class="bi bi-calendar-check display-5 text-warning"></i>
+              <p class="mt-2">Results in 30 days</p>
+            </div>
+          </div>
+        </div>
+        <p>
+          TropiClean is the manufacturer of the product, a company that is
+          producing pet grooming and oral care products. Their marketing focuses
+          on natural ingredients, mint flavor, no dyes or sulfates, and promises
+          visible improvement in 30 days.
+        </p>
+        <p>
+          The directions are fairly simple. According to the manufacturer, you
+          put two drops on both sides of the dog's mouth daily. Licking spreads
+          the gel to cover all tooth and gum surfaces.
+        </p>
+      </div>
+    </section>
+
+    <!-- Recommendation Section -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h2>Additional Recommendation</h2>
+            <p>
+              When I asked for general oral health recommendations, the
+              associate suggested using this gel together with antler bones.
+              According to them, the bones provide mechanical action of cleaning
+              and are safe for use. To prevent tooth damage, they recommended
+              starting with split antler bones, as they are softer, and then
+              moving on to regular ones.
+            </p>
+          </div>
+          <div class="col-md-6 image-col">
+            <img
+              src="antlers1.jpg"
+              alt="Antler Bone"
+              style="max-width: 250px"
+            />
+            <img
+              src="antlers2.jpg"
+              alt="Antler Bone"
+              style="max-width: 250px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="bg-light">
+      <div class="container text-center">
+        <h2>Conclusion</h2>
+        <p>
+          From my perspective as a client, I was interested in the product
+          because it is so easy to apply, there is a promise of results with
+          images showing before and after, and the store associate recommended
+          it. As a pet owner with no formal training in animal oral health, I
+          was convinced by those claims. My dog doesn’t like having their teeth
+          brushed, so removing that extra stress is very important to me.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Veterinary Dentistry Assignment | Daria Davydenko | 200335788</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap & JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Fun Animation -->
+    <script>
+      // Fade-in animation for sections
+      const sections = document.querySelectorAll("section");
+      const options = { threshold: 0.2 };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(
+              "animate__animated",
+              "animate__fadeInUp"
+            );
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+
+      sections.forEach((sec) => observer.observe(sec));
+    </script>
+    <!-- Animate.css CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </body>
 </html>
