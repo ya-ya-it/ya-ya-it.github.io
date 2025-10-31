@@ -16,11 +16,14 @@
         font-family: "Poppins", sans-serif;
         background: #ffffff;
         margin: 0;
-        height: 100vh;
-        overflow: hidden;
+        min-height: 100vh;
+        overflow-y: auto; /* allows scrolling */
+        overflow-x: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
+        padding: 40px 0; /* ensures nothing touches the edges */
       }
 
       /* Background decorations */
@@ -192,6 +195,56 @@
         background: rgba(255, 255, 255, 0.8);
         padding: 6px 10px;
         border-radius: 10px;
+      }
+      @media (max-width: 768px) {
+        html,
+        body {
+          height: auto;
+          min-height: 100vh;
+          overflow-y: auto;
+        }
+
+        body {
+          display: block;
+          padding: 80px 10px 40px; /* added top padding so text doesn’t cut off */
+          box-sizing: border-box;
+        }
+
+        .container {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .device {
+          position: static;
+          transform: none;
+          width: 70%;
+          max-width: 300px;
+          margin-bottom: 20px;
+        }
+
+        .card {
+          position: static;
+          opacity: 1 !important;
+          transform: scale(1);
+          width: 90%;
+          max-width: 320px;
+        }
+
+        .click-text {
+          position: static;
+          margin-top: 15px;
+          text-align: center;
+        }
+
+        /* Hide background elements on mobile */
+        .decor {
+          display: none;
+        }
       }
     </style>
   </head>
