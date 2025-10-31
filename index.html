@@ -3,244 +3,272 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dental Care Assignment</title>
-    <!-- Bootstrap CSS -->
+    <title>PetMAP Graphic II</title>
+
+    <!-- Modern font -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
 
-    <!-- Custom CSS -->
     <style>
       body {
-        font-family: Arial, sans-serif;
-        scroll-behavior: smooth;
-      }
-      section {
-        min-height: 100vh;
-        padding: 60px 20px;
+        font-family: "Poppins", sans-serif;
+        background: #ffffff;
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
         display: flex;
+        justify-content: center;
         align-items: center;
       }
-      .image-col img {
-        max-width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+      /* Background decorations */
+      .decor {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.15;
+        z-index: 0;
       }
-      .marketing-point {
-        background: #f8f9fa;
-        padding: 20px;
-        margin: 10px 0;
-        border-radius: 8px;
-        transition: transform 0.3s ease;
+
+      .circle1 {
+        width: 220px;
+        height: 220px;
+        background: #aee1f9;
+        top: 10%;
+        left: 8%;
       }
-      .marketing-point:hover {
-        transform: translateY(-5px);
+      .circle2 {
+        width: 280px;
+        height: 280px;
+        background: #fcd5ce;
+        bottom: 12%;
+        right: 12%;
       }
-      footer {
-        background: #343a40;
-        color: white;
-        padding: 30px 20px;
+      .circle3 {
+        width: 150px;
+        height: 150px;
+        background: #daf0d2;
+        top: 65%;
+        left: 15%;
+      }
+      .circle4 {
+        width: 180px;
+        height: 180px;
+        background: #e7e3ff;
+        top: 20%;
+        right: 20%;
+      }
+      .ring {
+        position: absolute;
+        border: 3px solid #fbe6c2;
+        border-radius: 50%;
+        opacity: 0.2;
+        width: 500px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+      }
+
+      .line {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #aee1f9, #fcd5ce);
+        top: 50%;
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      .container {
+        position: relative;
+        width: 950px;
+        height: 750px;
+        z-index: 1;
+      }
+
+      .device {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+        border-radius: 20px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+      }
+
+      .card {
+        position: absolute;
+        border-radius: 20px;
+        padding: 15px 18px;
+        width: 200px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: scale(0.8);
+        transition: all 0.7s ease;
+        z-index: 3;
+      }
+
+      .card h3 {
+        margin: 0 0 5px;
+        font-size: 1rem;
         text-align: center;
+      }
+
+      .card p {
+        font-size: 0.85rem;
+        text-align: center;
+        margin: 0;
+      }
+
+      /* Pastel colors + non-overlapping positions */
+      .overview {
+        background: #cce5ff;
+        top: 6%;
+        left: 60%;
+        transform: translateX(-50%) scale(0.8);
+      }
+      .clinical {
+        background: #d7f9f1;
+        top: 30%;
+        right: 8%;
+      }
+      .use {
+        background: #fef7d1;
+        top: 30%;
+        left: 8%;
+      }
+      .attachments {
+        background: #ffd6d6;
+        top: 55%;
+        right: 2%;
+      }
+      .quickcuffs {
+        background: #e7e3ff;
+        bottom: 10%;
+        right: 18%;
+      }
+      .cleaning {
+        background: #fbe6c2;
+        bottom: 10%;
+        left: 18%;
+      }
+      .maintenance {
+        background: #daf0d2;
+        top: 55%;
+        left: 2%;
+      }
+      .how {
+        background: #fff0f5;
+        top: 6%;
+        left: 20%;
+        transform: translateX(-50%) scale(0.8);
+      }
+
+      /* Reveal animation */
+      .show {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* Hover lift */
+      .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s;
+      }
+
+      /* Instruction text */
+      .click-text {
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.95rem;
+        color: #555;
+        opacity: 0.8;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 6px 10px;
+        border-radius: 10px;
       }
     </style>
   </head>
   <body>
-    <!-- Hero Section -->
-    <section class="bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 image-col">
-            <img src="store.jpg" alt="Global Pet Foods Store" />
-          </div>
-          <div class="col-md-6 d-flex flex-column justify-content-center px-4">
-            <h1 class="display-4 fw-bold">TropiClean Fresh Breath Gel</h1>
-            <p class="lead">A client’s perspective on pet dental care</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Decorative background elements -->
+    <div class="decor circle1"></div>
+    <div class="decor circle2"></div>
+    <div class="decor circle3"></div>
+    <div class="decor circle4"></div>
+    <div class="decor ring"></div>
+    <div class="decor line"></div>
 
-    <!-- Product Section -->
-    <section>
-      <div class="container">
-        <div class="row flex-md-row-reverse">
-          <div class="col-md-6 image-col">
-            <img
-              src="product1.jpg"
-              alt="TropiClean Gel"
-              style="max-width: 250px"
-            />
-            <img
-              src="product2.jpg"
-              alt="TropiClean Gel"
-              style="max-width: 250px"
-            />
-            <img
-              src="product3.jpg"
-              alt="TropiClean Gel"
-              style="max-width: 250px"
-            />
-            <img
-              src="product4.jpg"
-              alt="TropiClean Gel"
-              style="max-width: 250px"
-            />
-          </div>
-          <div class="col-md-6 d-flex flex-column justify-content-center">
-            <h2>About the Product</h2>
-            <p>
-              I chose this product because of the bright colors of its package,
-              form of application, and the promotional images. The product label
-              states that it “removes plaque and tartar” and helps support fresh
-              breath. The form of application is a gel, so you directly apply it
-              to the dog's teeth without the need to brush. For owners who are
-              having trouble brushing his dog's teeth, this product is most
-              striking. The packaging shows a smiling, healthy dog with clean
-              teeth, creating a positive association.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="container" id="container">
+      <img src="petmap-photo.png" alt="PetMAP Device" class="device" />
 
-    <!-- Marketing Points -->
-    <section class="bg-light py-5">
-      <div class="container">
-        <h2 class="mb-4 text-center">Marketing Points</h2>
-        <div class="row text-center">
-          <div class="col-md-2 col-6 mb-4">
-            <div class="marketing-point p-3">
-              <i class="bi bi-shield-check display-5 text-success"></i>
-              <p class="mt-2">Removes plaque and tartar</p>
-            </div>
-          </div>
-          <div class="col-md-2 col-6 mb-4">
-            <div class="marketing-point p-3">
-              <i class="bi bi-wind display-5 text-primary"></i>
-              <p class="mt-2">Supports fresh breath</p>
-            </div>
-          </div>
-          <div class="col-md-2 col-6 mb-4">
-            <div class="marketing-point p-3">
-              <i class="bi bi-flower3 display-5 text-success"></i>
-              <p class="mt-2">Natural ingredients</p>
-            </div>
-          </div>
-          <div class="col-md-2 col-6 mb-4">
-            <div class="marketing-point p-3">
-              <i class="bi bi-droplet display-5 text-info"></i>
-              <p class="mt-2">No dyes or sulfates</p>
-            </div>
-          </div>
-          <div class="col-md-2 col-6 mb-4">
-            <div class="marketing-point p-3">
-              <i class="bi bi-heart display-5 text-danger"></i>
-              <p class="mt-2">Cruelty-free</p>
-            </div>
-          </div>
-          <div class="col-md-2 col-6 mb-4">
-            <div class="marketing-point p-3">
-              <i class="bi bi-calendar-check display-5 text-warning"></i>
-              <p class="mt-2">Results in 30 days</p>
-            </div>
-          </div>
-        </div>
+      <div class="card overview">
+        <h3>Overview</h3>
         <p>
-          TropiClean is the manufacturer of the product, a company that is
-          producing pet grooming and oral care products. Their marketing focuses
-          on natural ingredients, mint flavor, no dyes or sulfates, and promises
-          visible improvement in 30 days.
-        </p>
-        <p>
-          The directions are fairly simple. According to the manufacturer, you
-          put two drops on both sides of the dog's mouth daily. Licking spreads
-          the gel to cover all tooth and gum surfaces.
+          Portable, non-invasive blood pressure monitor by Ramsey Medical, Inc.
         </p>
       </div>
-    </section>
 
-    <!-- Recommendation Section -->
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 d-flex flex-column justify-content-center">
-            <h2>Additional Recommendation</h2>
-            <p>
-              When I asked for general oral health recommendations, the
-              associate suggested using this gel together with antler bones.
-              According to them, the bones provide mechanical action of cleaning
-              and are safe for use. To prevent tooth damage, they recommended
-              starting with split antler bones, as they are softer, and then
-              moving on to regular ones.
-            </p>
-          </div>
-          <div class="col-md-6 image-col">
-            <img
-              src="antlers1.jpg"
-              alt="Antler Bone"
-              style="max-width: 250px"
-            />
-            <img
-              src="antlers2.jpg"
-              alt="Antler Bone"
-              style="max-width: 250px"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Conclusion Section -->
-    <section class="bg-light">
-      <div class="container text-center">
-        <h2>Conclusion</h2>
+      <div class="card clinical">
+        <h3>Clinical Use</h3>
         <p>
-          From my perspective as a client, I was interested in the product
-          because it is so easy to apply, there is a promise of results with
-          images showing before and after, and the store associate recommended
-          it. As a pet owner with no formal training in animal oral health, I
-          was convinced by those claims. My dog doesn’t like having their teeth
-          brushed, so removing that extra stress is very important to me.
+          Measures systolic, diastolic, and mean pressures, plus heart rate in
+          small animals.
         </p>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-      <p>Veterinary Dentistry Assignment | Daria Davydenko | 200335788</p>
-    </footer>
+      <div class="card use">
+        <h3>Use</h3>
+        <p>Select species and site, attach the cuff, and press Start.</p>
+      </div>
 
-    <!-- Bootstrap & JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Fun Animation -->
+      <div class="card attachments">
+        <h3>Attachments</h3>
+        <p>Cuff, power cord, optional SD card, stand, and cover.</p>
+      </div>
+
+      <div class="card quickcuffs">
+        <h3>QuickCuffs</h3>
+        <p>Durable, flexible cuffs with Velcro-free closure for smooth use.</p>
+      </div>
+
+      <div class="card cleaning">
+        <h3>Cleaning</h3>
+        <p>Wipe with 70% alcohol, air-dry cuffs, never submerge the device.</p>
+      </div>
+
+      <div class="card maintenance">
+        <h3>Maintenance</h3>
+        <p>Check for leaks, charge battery, and calibrate yearly.</p>
+      </div>
+
+      <div class="card how">
+        <h3>How It Works</h3>
+        <p>
+          The cuff inflates and detects arterial pulsations to calculate blood
+          pressure values.
+        </p>
+      </div>
+
+      <div class="click-text">Click to reveal more information ✨</div>
+    </div>
+
     <script>
-      // Fade-in animation for sections
-      const sections = document.querySelectorAll("section");
-      const options = { threshold: 0.2 };
+      const cards = document.querySelectorAll(".card");
+      let currentIndex = 0;
 
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(
-              "animate__animated",
-              "animate__fadeInUp"
-            );
-            observer.unobserve(entry.target);
-          }
-        });
-      }, options);
-
-      sections.forEach((sec) => observer.observe(sec));
+      document.body.addEventListener("click", () => {
+        if (currentIndex < cards.length) {
+          cards[currentIndex].classList.add("show");
+          currentIndex++;
+        }
+        // No reset — once revealed, they stay visible
+      });
     </script>
-    <!-- Animate.css CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
   </body>
 </html>
